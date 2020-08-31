@@ -101,6 +101,7 @@ class StructGenerator {
         """
         static var \(name.camelCase(" ")): [\(csv.name)] {
                [
+
         """
     }
 
@@ -110,7 +111,7 @@ class StructGenerator {
     }
 
     func generate() -> String  {
-        "import Foundation\n\n" + makeStruct(csv.name) + "\n\n" + makeExtension(csv.name) + "\n\nextension \(csv.name) {\n\n" + StructGenerator.parameterTypes + "\n\n}"
+        "import Foundation\n\n" + makeStruct(csv.name) + "\n\n" + makeExtension(csv.name) + "\n\nextension \(csv.name) {\n\n" + StructGenerator.parameterTypes + "\n}"
 
     }
 
